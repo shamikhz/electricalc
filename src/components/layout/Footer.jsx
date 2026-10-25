@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 import { ShieldCheck } from 'lucide-react';
 import { APPLIANCES } from '../../data/appliances';
 import { BrandLogo } from '../common/BrandLogo';
+import { InstallAppButton } from '../common/InstallAppButton';
 
 export function Footer() {
   return (
@@ -20,9 +21,12 @@ export function Footer() {
             <p className="text-sm text-slate-400 leading-relaxed max-w-sm">
               An independent, privacy-first electricity calculator providing transparent, accurate energy consumption and cost estimates for Indian households and appliances.
             </p>
-            <div className="flex items-center gap-2 text-xs text-slate-400 pt-2">
+            <div className="flex items-center gap-2 text-xs text-slate-400 pt-1">
               <ShieldCheck className="w-4 h-4 text-emerald-400 shrink-0" />
               <span>Zero server tracking. All household data stored 100% locally in your browser.</span>
+            </div>
+            <div className="pt-2">
+              <InstallAppButton />
             </div>
           </div>
 

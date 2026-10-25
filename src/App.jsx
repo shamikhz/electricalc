@@ -2,6 +2,7 @@ import React, { useEffect, Suspense, lazy } from 'react';
 import { BrowserRouter, Routes, Route, useLocation, Navigate, useParams } from 'react-router-dom';
 import { Navbar } from './components/layout/Navbar';
 import { Footer } from './components/layout/Footer';
+import { OfflineBlocker } from './components/common/OfflineBlocker';
 import { HomePage } from './pages/HomePage';
 
 // Lazy-loaded routes for optimal initial bundle size and fast LCP/FCP
@@ -71,6 +72,7 @@ export function App() {
   return (
     <BrowserRouter>
       <ScrollToTop />
+      <OfflineBlocker />
       <div className="flex flex-col min-h-screen bg-slate-50 text-slate-900 font-sans antialiased">
         <Navbar />
         <main className="flex-1 max-w-7xl w-full mx-auto px-4 sm:px-6 lg:px-8 pt-6 sm:pt-8">
