@@ -420,7 +420,7 @@ export function ComparePage() {
       </div>
 
       {/* Savings & Payback Results Card */}
-      <div className="bg-black text-white rounded-2xl p-6 sm:p-8 border border-neutral-800 shadow-xl space-y-6">
+      <div className="bg-slate-800 text-white rounded-2xl p-6 sm:p-8 border border-slate-700 shadow-xl space-y-6">
         <div className="flex items-center gap-2 text-emerald-400 font-bold text-sm uppercase tracking-wider">
           <TrendingDown className="w-5 h-5" />
           <span>Calculated Savings & Payback Analysis</span>
@@ -441,7 +441,7 @@ export function ComparePage() {
           </div>
 
           {/* Annual Savings */}
-          <div className="space-y-1 md:border-l md:border-neutral-800 md:pl-6">
+          <div className="space-y-1 md:border-l md:border-slate-700 md:pl-6">
             <span className="text-xs text-white font-semibold block">Annual Bill Savings</span>
             <div className="text-3xl sm:text-4xl font-extrabold text-white tabular-nums">
               {comparison.savedYearlyCost > 0
@@ -454,7 +454,7 @@ export function ComparePage() {
           </div>
 
           {/* Payback Period */}
-          <div className="space-y-1 md:border-l md:border-neutral-800 md:pl-6">
+          <div className="space-y-1 md:border-l md:border-slate-700 md:pl-6">
             <span className="text-xs text-white font-semibold block">Investment Payback</span>
             <div className="text-3xl sm:text-4xl font-extrabold text-teal-300 tabular-nums">
               {comparison.paybackMonths
@@ -472,7 +472,7 @@ export function ComparePage() {
         </div>
 
         {/* Payback Explanation Text */}
-        <div className="bg-neutral-900 rounded-xl p-4 border border-neutral-800 text-xs text-white space-y-2">
+        <div className="bg-slate-900/60 rounded-xl p-4 border border-slate-700 text-xs text-white space-y-2">
           <div className="font-semibold text-emerald-400 flex items-center gap-1.5">
             <Sparkles className="w-4 h-4" />
             <span>Economic Insight:</span>
