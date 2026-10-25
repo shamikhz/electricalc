@@ -420,7 +420,7 @@ export function ComparePage() {
       </div>
 
       {/* Savings & Payback Results Card */}
-      <div className="bg-gradient-to-br from-slate-900 to-slate-850 text-white rounded-2xl p-6 sm:p-8 border border-slate-800 shadow-xl space-y-6">
+      <div className="bg-black text-white rounded-2xl p-6 sm:p-8 border border-neutral-800 shadow-xl space-y-6">
         <div className="flex items-center gap-2 text-emerald-400 font-bold text-sm uppercase tracking-wider">
           <TrendingDown className="w-5 h-5" />
           <span>Calculated Savings & Payback Analysis</span>
@@ -429,33 +429,33 @@ export function ComparePage() {
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
           {/* Monthly Savings */}
           <div className="space-y-1">
-            <span className="text-xs text-slate-400 font-semibold block">Monthly Bill Savings</span>
+            <span className="text-xs text-white font-semibold block">Monthly Bill Savings</span>
             <div className="text-3xl sm:text-4xl font-extrabold text-emerald-400 tabular-nums">
               {comparison.savedMonthlyCost > 0
                 ? formatCurrency(comparison.savedMonthlyCost)
                 : '₹0.00'}
             </div>
-            <p className="text-xs text-slate-400 tabular-nums">
+            <p className="text-xs text-white tabular-nums">
               Saves {formatEnergy(comparison.savedMonthlyKwh)} (Units) each month
             </p>
           </div>
 
           {/* Annual Savings */}
-          <div className="space-y-1 md:border-l md:border-slate-800 md:pl-6">
-            <span className="text-xs text-slate-400 font-semibold block">Annual Bill Savings</span>
+          <div className="space-y-1 md:border-l md:border-neutral-800 md:pl-6">
+            <span className="text-xs text-white font-semibold block">Annual Bill Savings</span>
             <div className="text-3xl sm:text-4xl font-extrabold text-white tabular-nums">
               {comparison.savedYearlyCost > 0
                 ? formatCurrency(comparison.savedYearlyCost)
                 : '₹0.00'}
             </div>
-            <p className="text-xs text-slate-400 tabular-nums">
+            <p className="text-xs text-white tabular-nums">
               {formatPercent(comparison.percentageEnergySaved)} power reduction vs Appliance A
             </p>
           </div>
 
           {/* Payback Period */}
-          <div className="space-y-1 md:border-l md:border-slate-800 md:pl-6">
-            <span className="text-xs text-slate-400 font-semibold block">Investment Payback</span>
+          <div className="space-y-1 md:border-l md:border-neutral-800 md:pl-6">
+            <span className="text-xs text-white font-semibold block">Investment Payback</span>
             <div className="text-3xl sm:text-4xl font-extrabold text-teal-300 tabular-nums">
               {comparison.paybackMonths
                 ? `${comparison.paybackMonths.toFixed(1)} Months`
@@ -463,7 +463,7 @@ export function ComparePage() {
                 ? 'Immediate'
                 : 'N/A'}
             </div>
-            <p className="text-xs text-slate-400 tabular-nums">
+            <p className="text-xs text-white tabular-nums">
               {comparison.paybackYears && comparison.paybackYears >= 1
                 ? `Approx. ${comparison.paybackYears.toFixed(1)} years to break even`
                 : 'Time required to recover upfront price premium'}
@@ -472,17 +472,17 @@ export function ComparePage() {
         </div>
 
         {/* Payback Explanation Text */}
-        <div className="bg-slate-800/80 rounded-xl p-4 border border-slate-700/80 text-xs text-slate-300 space-y-2">
+        <div className="bg-neutral-900 rounded-xl p-4 border border-neutral-800 text-xs text-white space-y-2">
           <div className="font-semibold text-emerald-400 flex items-center gap-1.5">
             <Sparkles className="w-4 h-4" />
             <span>Economic Insight:</span>
           </div>
-          <p className="leading-relaxed">
-            By choosing <strong>{nameB}</strong> instead of <strong>{nameA}</strong>, you reduce your daily consumption by{' '}
-            <strong>{formatEnergy(comparison.savedDailyKwh)}</strong>. Over a 5-year operating lifespan, total cumulative electricity savings will reach{' '}
-            <strong className="text-emerald-400">
+          <p className="leading-relaxed text-white">
+            By choosing <strong className="text-white">{nameB}</strong> instead of <strong className="text-white">{nameA}</strong>, you reduce your daily consumption by{' '}
+            <strong className="text-white">{formatEnergy(comparison.savedDailyKwh)}</strong>. Over a 5-year operating lifespan, total cumulative electricity savings will reach{' '}
+            <strong className="text-emerald-400 font-bold">
               {formatCurrency(comparison.savedYearlyCost * 5)}
-            </strong>, returning your initial extra investment of {formatCurrency(priceDifference)} multiple times over.
+            </strong>, returning your initial extra investment of <strong className="text-white">{formatCurrency(priceDifference)}</strong> multiple times over.
           </p>
         </div>
       </div>
